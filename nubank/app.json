@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "atividade1",
-    "slug": "atividade1",
+    "name": "nubank",
+    "slug": "nubank",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "atividade1",
+    "scheme": "nubank",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
