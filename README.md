@@ -46,13 +46,13 @@ Antes de começar, você precisa ter instalado:
 
 # 🚀 Como criar o projeto
 
->1️⃣ Instalar o Expo CLI
+1️⃣ Instalar o Expo CLI
 
-npm install -g expo-cli
+>npm install -g expo-cli
 
->2️⃣ Criar o projeto
+2️⃣ Criar o projeto
 
-npx create-expo-app aplicativo-teste
+>npx create-expo-app aplicativo-teste
 
   
 
@@ -72,11 +72,10 @@ Escolha um template:
 
   
 
->3️⃣ Acessar a pasta do projeto
+3️⃣ Acessar a pasta do projeto
 
-cd aplicativo-teste
+>cd aplicativo-teste
 
->4️⃣ Iniciar o projeto
+4️⃣ Iniciar o projeto
 
-expo start
-```
+>expo start
