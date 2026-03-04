@@ -38,4 +38,4 @@ Escolha um template:
 >3️⃣ Acessar a pasta do projeto
 cd aplicativo-teste
 >4️⃣ Iniciar o projeto
-expo start
+expo start.
