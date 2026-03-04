@@ -1,29 +1,38 @@
-import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function PixHeader() {
     const router = useRouter();
-  <TouchableOpacity onPress={() => router.back()}>
-  <Text style={{ color: 'white', fontSize: 50 }}>
-    ← Voltar
-  </Text>
-</TouchableOpacity>
+
     return (
+
         <View>
+            <TouchableOpacity
+                style={styles.closeButton}
+                onPress={() => router.back()}
+            >
+            <Feather name="x" size={26} color="white" />
+            </TouchableOpacity>
+
             <Text style={styles.title}>Área Pix</Text>
             <Text style={styles.description}>Envie e receba pagamentos a qualquer hora e dia de semana, sem pagar nada por isso.</Text>
         </View>
     )
 }
 
-const styles = StyleSheet.create ({
-    title:{
-        fontSize: 39,
+const styles = StyleSheet.create({
+    title: {
+        fontSize: 33,
         color: '#fff',
         fontWeight: 'bold'
     },
-    description:{
+    description: {
         fontSize: 27,
-        color: '#ababab'
-    }
+        color: '#ababab',
+        marginTop: 10, 
+    },
+    closeButton: {
+        marginBottom: 15,
+  },
 })

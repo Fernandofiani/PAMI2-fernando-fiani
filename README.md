@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##📱 pami-fernando-fiani
 
 Programação de Aplicativos Mobile I
@@ -39,3 +40,6 @@ Escolha um template:
 cd aplicativo-teste
 >4️⃣ Iniciar o projeto
 expo start.
+=======
+
+>>>>>>> 0ae35453558e2abd15d040a42af2b056ecbdfa25

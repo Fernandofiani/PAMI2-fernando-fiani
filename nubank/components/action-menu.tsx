@@ -1,17 +1,18 @@
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { Barcode } from 'lucide-react-native';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
-function ActionItem({ icon, label, onPress }: any) {
+function ActionItem({ IconComponent, iconName, label, onPress }: any) {
   return (
-    <TouchableOpacity style={styles.item} onPress={onPress}>
-      <View style={styles.circle}>
-        <Feather name={icon} size={22} color="white" />
-      </View>
-      <Text style={styles.label}>{label}</Text>
-    </TouchableOpacity>
-  );
+      <TouchableOpacity style={styles.item} onPress={onPress}>
+        <View style={styles.circle}>
+          <IconComponent name={iconName} size={22} color="white" />
+        </View>
+        <Text style={styles.label}>{label}</Text>
+      </TouchableOpacity>
+    );
 }
 
 export default function ActionMenu() {
@@ -20,15 +21,24 @@ export default function ActionMenu() {
   return (
     <View style={styles.container}>
       <ActionItem 
-        onPress={() => router.push('/pix')} 
-        icon="repeat" 
-        label="Área Pix" 
+      IconComponent={Feather}
+      iconName="command"
+      label="Área Pix"
+      onPress={() => router.push('/pix')}
       />
       <ActionItem
       onPress={() => router.push('/payments')}
-      icon="barcode" label="Pagar" />
-      <ActionItem icon="grid" label="Pix QR" />
-      <ActionItem icon="smartphone" label="Recarga" />
+      IconComponent={Barcode}
+      iconName={undefined} // Barcode não usa "name"
+      label="Pagar" />
+      <ActionItem 
+        IconComponent={Feather}
+        iconName="grid"
+        label="Pix QR" />
+      <ActionItem 
+        IconComponent={Feather}
+        iconName="smartphone"
+        label="Recarga" />
     </View>
   );
 }
